@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="data.json"></script>
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top border-bottom border-dark shadow  bg-body">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
+      <div class="offcanvas-lg offcanvas-end flex-grow-1">
+        <div class="offcanvas-body p-4 pt-0 p-lg-0">
+          <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+            <li class="nav-item col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="26" height="21" viewBox="0 0 26 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_458_311)">
+                    <path
+                      d="M12.998 4.01099L3.83224 11.8748C3.83149 11.8916 3.82893 11.9082 3.82461 11.9243C3.82031 11.9405 3.81777 11.9572 3.817 11.9739V19.9368C3.82467 20.5198 4.27663 20.9907 4.83678 20.9992H10.9603V14.6289H15.0413V21.0002H21.1619C21.7223 20.9917 22.1745 20.521 22.1827 19.9378V11.9749C22.1843 11.941 22.1787 11.9072 22.1665 11.8758L12.998 4.01099Z"
+                      fill="#E60A17" />
+                    <path
+                      d="M25.8162 10.3692L22.2878 7.34953V0.58082C22.2933 0.43828 22.2406 0.29987 22.1426 0.199C22.0446 0.09814 21.91 0.04398 21.7715 0.04962H18.6755C18.5369 0.04368 18.4022 0.09773 18.3041 0.19866C18.206 0.2996 18.1535 0.43819 18.1592 0.58081V3.81552L14.2243 0.43116C13.503 -0.14372 12.495 -0.14372 11.7737 0.43116L0.178863 10.3692C0.0722233 10.456 0.00753332 10.5862 0.00162332 10.726C-0.0120967 10.8663 0.0283833 11.0065 0.114323 11.1164L1.11419 12.3443C1.20236 12.4449 1.32267 12.5096 1.45326 12.5266C1.59083 12.5347 1.72691 12.4938 1.83857 12.4107L12.9971 2.83737L24.1556 12.4107C24.2507 12.4912 24.3716 12.5326 24.4946 12.5266H24.5428C24.6734 12.5095 24.7937 12.4448 24.8819 12.3443L25.8837 11.1154C25.9696 11.0055 26.0101 10.8653 25.9964 10.725C25.9892 10.5851 25.9235 10.4553 25.8162 10.3692V10.3692Z"
+                      fill="#E60A17" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_458_311">
+                      <rect width="26" height="21.0002" fill="white" transform="translate(-0.000999451)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_458_301)">
+                    <g clip-path="url(#clip1_458_301)">
+                      <path
+                        d="M17.9084 20.8811L15.0377 18.926L12.167 20.8811C11.9307 21.0421 11.6194 21.04 11.3851 20.876C11.1509 20.7119 11.0426 20.4201 11.1131 20.1429L12.0081 16.61L9.31788 14.3134C9.10411 14.1306 9.02315 13.8361 9.11345 13.5697C9.20375 13.3033 9.44711 13.1188 9.72797 13.1036L13.1553 12.9099L14.3979 9.52656C14.4969 9.25484 14.7552 9.07401 15.0443 9.07401C15.3335 9.07401 15.5918 9.25484 15.6908 9.52656L16.9334 12.9099L20.3484 13.1036C20.6293 13.1188 20.8727 13.3033 20.9629 13.5697C21.0532 13.8361 20.9723 14.1306 20.7585 14.3134L18.0683 16.6099L18.9633 20.1429C19.0321 20.4195 18.9236 20.7099 18.6903 20.8734C18.4569 21.037 18.1469 21.0401 17.9104 20.8811L17.9084 20.8811Z"
+                        fill="#4F4F4F" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M20.1248 6.96962H20.072L19.4423 2.26513C19.2652 0.97022 18.1561 0.0036 16.8435 0H4.15537C2.84271 0.00359 1.73367 0.97022 1.55654 2.26513L0.926881 6.96962H0.874081C0.390791 6.96962 -0.000999451 7.35967 -0.000999451 7.84082C-0.000999451 8.32197 0.390781 8.71202 0.874081 8.71202H1.74916V16.548C1.75346 17.9897 2.9263 19.1573 4.37439 19.1616H10.0003L10.4374 17.4192H4.37537C3.89281 17.4171 3.50199 17.0284 3.49932 16.548V8.71203H13.4566C13.9133 8.16039 14.5938 7.84085 15.3119 7.84085C16.0299 7.84085 16.7104 8.16038 17.1671 8.71203H17.4996V9.26103C17.5317 9.30579 17.5555 9.35589 17.57 9.40899L18.357 11.5505L19.2497 11.6031V8.71202H20.1248C20.6081 8.71202 20.9999 8.32197 20.9999 7.84082C20.9999 7.35967 20.6081 6.96962 20.1248 6.96962H20.1248ZM4.86424 6.96962H2.69366L3.2891 2.50069C3.34799 2.06848 3.71727 1.74523 4.15538 1.7424H5.5643L4.86424 6.96962ZM9.62387 6.96962H6.63199L7.33205 1.7424H9.62387V6.96962ZM11.374 6.96962V1.7424H13.6668L14.3669 6.96962H11.374ZM16.1337 6.96962L15.4336 1.7424H16.8425C17.2806 1.74523 17.6499 2.06847 17.7088 2.50069L18.3042 6.96962H16.1337Z"
+                        fill="#4F4F4F" />
+                      <path
+                        d="M8.06993 13.3133C7.78136 14.1582 7.96673 15.0929 8.55589 15.7636C8.43089 15.8013 8.30094 15.82 8.1704 15.819H6.79453C5.90929 15.8145 5.19293 15.0977 5.189 14.2125V12.8356C5.19349 11.9507 5.90968 11.2345 6.79453 11.23H8.17143C8.65176 11.2278 9.10604 11.4482 9.40172 11.8267C8.7694 12.1145 8.28617 12.6535 8.06891 13.3133H8.06993Z"
+                        fill="#4F4F4F" />
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_458_301">
+                      <rect width="21.0009" height="21.0004" fill="white" transform="translate(-0.000999451)" />
+                    </clipPath>
+                    <clipPath id="clip1_458_301">
+                      <rect width="21.0009" height="21.0004" fill="white" transform="translate(-0.000999451)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-lg-auto d-flex align-items-center">
+              <div class="input-group flex-nowrap item-search">
+                <span class="input-group-text border-0 bg-light rounded-5 rounded-end" id="addon-wrapping">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_458_316)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.34936 1.60176C7.21354 -0.53392 3.73732 -0.53392 1.6015 1.60176C-0.533863 3.73791 -0.533863 7.21343 1.6015 9.34957C3.50351 11.251 6.46579 11.4547 8.60023 9.96995C8.64514 10.1824 8.74793 10.3852 8.91322 10.5505L12.0237 13.6608C12.4769 14.1131 13.2094 14.1131 13.6604 13.6608C14.1132 13.208 14.1132 12.4755 13.6604 12.0241L10.5499 8.91299C10.3856 8.7491 10.1823 8.64586 9.96979 8.60095C11.4556 6.46619 11.2518 3.50457 9.34937 1.60176H9.34936ZM8.36734 8.36762C6.77276 9.96209 4.17764 9.96209 2.58353 8.36762C0.989877 6.77315 0.989877 4.17866 2.58353 2.58419C4.17764 0.99018 6.77276 0.99018 8.36734 2.58419C9.96192 4.17866 9.96192 6.77315 8.36734 8.36762Z"
+                        fill="#4F4F4F" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_458_316">
+                        <rect width="14" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <input type="text" class="form-control border-0 bg-light rounded-5 rounded-start" placeholder="Search"
+                  aria-label="Search" aria-describedby="addon-wrapping">
+              </div>
+            </li>
+          </ul>
+          <div class="position-absolute top-50 start-50 translate-middle " role="button">
+            <img src="./img/logo/logo.png" alt="logo">
+          </div>
+          <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M6.66715 9.89972H4.44429V12.1003H6.66715V9.89972ZM11.1114 9.89972H8.88858V12.1003H11.1114V9.89972ZM15.5557 9.89972H13.3329V12.1003H15.5557V9.89972ZM17.7786 2.20057H16.6672V0H14.4443V2.20056H5.55572V0H3.33286V2.20056H2.22286C1.63459 2.20056 1.07059 2.43258 0.65558 2.84529C0.24059 3.25798 0.00877046 3.81737 0.0114305 4.39971L4.6196e-07 19.7994C-0.000379538 20.3832 0.233691 20.9431 0.65064 21.3559C1.06759 21.7687 1.6332 22.0004 2.22286 22H17.7772C19.0035 21.9969 19.9969 21.0135 20 19.7994V4.39971C19.9961 3.18621 19.0029 2.20366 17.7772 2.20056L17.7786 2.20057ZM17.7786 19.7994H2.22286V7.69915H17.7772L17.7786 19.7994Z"
+                    fill="#4F4F4F" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_458_277)">
+                    <path
+                      d="M8.7547 12.715C8.95382 13.3386 9.52281 13.7605 10.1646 13.7605H20.5938C21.2599 13.7602 21.8441 13.3062 22.0223 12.6503L23.9459 5.56004C24.0699 5.1041 23.9782 4.61516 23.698 4.23837C23.4179 3.86157 22.9815 3.64023 22.5185 3.64005H7.10868L5.71624 1.65751C4.98441 0.61694 3.80714 3e-05 2.55318 0H1.09297C0.48934 0 0 0.50006 0 1.11692C0 1.73378 0.48934 2.23384 1.09297 2.23384H2.3171C3.01173 2.23309 3.6636 2.57658 4.06585 3.1553L6.02555 5.97776V14.8014C6.02555 16.235 7.16277 17.3972 8.56561 17.3972H20.3161C20.9198 17.3972 21.4091 16.8971 21.4091 16.2803C21.4091 15.6634 20.9198 15.1633 20.3161 15.1633H8.85634C8.52253 15.1633 8.25193 14.8868 8.25193 14.5457V11.1391L8.7547 12.715Z"
+                      fill="#4F4F4F" />
+                    <circle cx="8.32621" cy="19.8982" r="1.512" fill="#4F4F4F" />
+                    <circle cx="19.4955" cy="19.8982" r="1.512" fill="#4F4F4F" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_458_277">
+                      <rect width="24" height="21.4102" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_458_272)">
+                    <g clip-path="url(#clip1_458_272)">
+                      <path
+                        d="M6.96843 11.8602C7.07771 11.985 7.14199 12.1444 7.14199 12.3176V21.9997L10.9988 18.4443V12.3176C10.9988 12.1444 11.0631 11.985 11.1724 11.8602L17.6968 4.19501H0.44397L6.96843 11.8602Z"
+                        fill="#E60A17" />
+                      <rect width="18" height="2" fill="#E60A17" />
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_458_272">
+                      <rect width="18" height="21.9997" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_458_272">
+                      <rect width="18" height="21.9997" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_458_266)">
+                    <path
+                      d="M19.9291 18.6653L18.212 16.0264C17.419 14.8083 17 13.4132 17 11.9933V9.68165C17 6.76333 14.8879 4.29498 11.9998 3.49923V1.84414C11.9998 0.82709 11.1027 0 9.99966 0C8.89661 0 7.99956 0.82709 7.99956 1.84414V3.49923C5.11149 4.29498 2.9994 6.76333 2.9994 9.68165V11.9933C2.9994 13.4132 2.58037 14.8074 1.78834 16.0255L0.0712906 18.6644C-0.0217094 18.8073 -0.0237294 18.9844 0.0652906 19.1291C0.154311 19.2739 0.319321 19.3633 0.499331 19.3633H19.5001C19.6801 19.3633 19.8461 19.2739 19.9351 19.1301C20.0241 18.9862 20.0211 18.8073 19.9291 18.6653L19.9291 18.6653Z"
+                      fill="#4F4F4F" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_458_266">
+                      <rect width="20" height="19.3633" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a class="nav-link py-2 px-0 px-lg-2" href="#">
+                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="9.00012" width="4" height="22" fill="#4F4F4F" />
+                  <rect x="21" y="9.52899" width="4" height="21" transform="rotate(90 21 9.52899)" fill="#4F4F4F" />
+                </svg>
+              </a>
+            </li>
+            <li class="nav-item col-6 col-lg-auto">
+              <a href=""><img src="./img/picture/pic-1.png" alt=""></a>
+              <button class=" py-2 pe-2 border-0 bg-white" href="#">
+                <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.76822 5.07814C4.36843 5.55789 3.63157 5.55789 3.23178 5.07813L0.366819 1.64018C-0.175953 0.988856 0.287204 0 1.13504 0L6.86496 0C7.7128 0 8.17595 0.988857 7.63318 1.64018L4.76822 5.07814Z"
+                    fill="#4F4F4F" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <nav class="bd-subnavbar sticky-top p-2 bg-light d-flex mb-3">
+    <div class="p-2 ">
+      <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#">favorites</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#">all</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#">news</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#">events</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#scores">scores</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#videos">videos</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#photos">photos</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#audio">audio</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#socials">socials</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#polls">polls</a></li>
+        <li class="nav-item col-lg-auto "><a class="nav-link text-capitalize fs-6 fw-bold link-secondary px-2"
+            href="#shop">shop</a></li>
+      </ul>
+    </div>
+    <div class="p-2 ms-auto">
+      <select class="form-select rounded-5 pe-5 ps-3 me-5 px-0 " role="button" required aria-label="select example">
+        <option class="" value="">Filter Favorites</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      <div class="invalid-feedback">Example invalid select feedback</div>
+    </div>
+  </nav>
+  <main>
+    <div id="home_product" class="container item-main">
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
