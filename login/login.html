@@ -2,62 +2,84 @@
 <html lang="en">
 
 <head>
-    <title>Glassmorphism login Form Tutorial in html css</title>
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./img/shutterstock_219272452.png">
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+  <title>Login Fandelo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
-    <div class="login">
-        <div class="background"></div>
-        <div class="text-center">
-            <a href="/webcome">
-            <div class="logo">           
-                    <img class="img-logo" src="img/cliquelogo_beta.png" alt="">               
-            </div>
-        </a>
+  <div class="login">
+    <div class="background"></div>
+    <div class="text-center">
+      <a href="/webcome">
+        <div class="logo">
+          <img class="img-logo" src="https://test.cdn.fandelo.com/images/fandelo_logo.png" alt="">
         </div>
-        <div class="main">
-            <div class="main-css">
-                <form class="content">
-                    <h3>Log in</h3>
-
-                    <input type="text" placeholder="Email" id="username">
-
-                    <input type="password" placeholder="Password" id="password">
-
-                    <button class="btn-login">Log In</button>
-
-                    <div class="for-password">
-                        <a href="#">Forgot password?</a>
-                    </div>
-
-                    <div class="social">
-                        <span>Or login with</span>
-                        <button type="button" class="btn-twitter">
-                            <i class='fab fa-twitter'></i>
-                        </button>
-                        <button type="button" class="btn-facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </button>
-
-                    </div>
-                    <div class="signup-link">
-                        <p>New to Fandelo? </p>
-                        <a href="#">Sign up</a>
-                    </div>
-                    <div class="login-link">
-                        <p>Are you a vendor?</p>
-                        <a href="#">Log in</a>
-                    </div>
-                </form>
-            </div>
-
-        </div>
+      </a>
     </div>
-  </body>
+    <div class="main">
+      <div class="main-css">
+        <div class="content row form-login">
+          <form class="form p-0" id="form">
+            <h1>Log in</h1>
+            <div class="form-validation p-0">
+              <input type="text" class="email mb-1" placeholder="Email" id="email">
+              <div class="error"></div>
+            </div>
+            <div class="form-validation p-0 pb-2">
+              <input type="password" class="password mb-2" placeholder="Password" id="password">
+              <div class="error"></div>
+            </div>
+            <button type="submit" class="btn-login">Log In</button>
+          </form>
+          <div class="for-password">
+            <a href="#">Forgot password?</a>
+          </div>
+          <div class="social">
+            <span>Or login with</span>
+            <button type="button" class="btn-twitter">
+              <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.5687 2.70792C20.7901 3.04421 19.9604 3.26711 19.0955 3.37534C19.9853 2.85223 20.6645 2.03019 20.9838 1.03936C20.1541 1.52639 19.2381 1.87042 18.2619 2.06239C17.4741 1.23648 16.3513 0.724976 15.1265 0.724976C12.7501 0.724976 10.8369 2.62416 10.8369 4.95241C10.8369 5.28741 10.8657 5.60952 10.9364 5.91618C7.36786 5.74482 4.21022 4.06079 2.08899 1.49547C1.71866 2.1281 1.50143 2.85223 1.50143 3.63174C1.50143 5.09544 2.26696 6.39291 3.40805 7.14409C2.71842 7.13121 2.04188 6.93407 1.46872 6.62355C1.46872 6.63644 1.46872 6.65319 1.46872 6.66994C1.46872 8.72375 2.95659 10.4297 4.9077 10.8226C4.55831 10.9167 4.1775 10.9618 3.78231 10.9618C3.5075 10.9618 3.23009 10.9463 2.96968 10.8896C3.52583 12.5634 5.10399 13.7938 6.98052 13.8338C5.52013 14.9586 3.66585 15.6363 1.65847 15.6363C1.30645 15.6363 0.968834 15.6209 0.631226 15.5784C2.53261 16.7856 4.78601 17.475 7.21607 17.475C15.1147 17.475 19.4331 11.0327 19.4331 5.44849C19.4331 5.26167 19.4266 5.08128 19.4174 4.90219C20.2693 4.30692 20.9851 3.56348 21.5687 2.70794L21.5687 2.70792Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <button type="button" class="btn-facebook">
+              <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.33449 10.0806H6.60198V20.15H2.46198V10.0806H0.492981V6.54186H2.46198V4.25187C2.46198 2.61428 3.23531 0.0499878 6.63882 0.0499878L9.70548 0.062889V3.49787H7.48043C7.11547 3.49787 6.60226 3.68129 6.60226 4.46246V6.54514H9.69621L9.33449 10.0806Z"
+                  fill="white" />
+              </svg>
+            </button>
+          </div>
+          <div class="signup-link">
+            <span>New to Fandelo? </span>
+            <a href="#">Sign up</a>
+          </div>
+          <div class="login-link">
+            <span>Are you a vendor?</span>
+            <a href="#">Log in</a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+
 </html>
